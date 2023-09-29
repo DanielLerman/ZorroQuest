@@ -1,13 +1,110 @@
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.purple{
+    color: #8033ef;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 5rem;
+}
+.welcomeTitle::before,.welcomeTitle2::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #8033ef, #f2eafe); 
+    opacity: 0.5; 
+    border-radius: 50%;
+    animation: bubbleAnimation 2s infinite alternate; 
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+} 
+.welcomeTitle2::before {
+    left: 60%;
+    transform: translateX(-30%);
+    transform: translateY(-50%);
+    width: 120px;
+    height: 120px;
+    bottom: 40%;
+}
+.welcomeTitle::after, .welcomeTitle2::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #8033ef, #f2eafe); 
+    opacity: 0.5; 
+    border-radius: 50%;
+    animation: bubbleAnimation 2s infinite alternate; 
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 30%;
+} 
+.welcomeTitle2::after{
+    left: 40%;
+    transform: translateX(-30%);
+    transform: translateY(-50%);
+    top: 20%;
+}
+.welcomeTitle::before,
+.welcomeTitle::after,
+.welcomeTitle::after::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #8033ef, #f2eafe); 
+    opacity: 0.5; 
+    border-radius: 50%;
+    animation: bubbleAnimation 2s infinite alternate; 
+}
+.welcomeTitle::after::after {
+    width: 60px;
+    height: 60px;
+    top: 70%;
+    left: 70%;
+}
+@keyframes bubbleAnimation {
+    to {
+        transform: translateX(-10%) translateY(-10%);
+    }
+}
+.startBtn{
+ font-size: 1.5rem;
+background-color: #8033ef;
+color: white;
+border: none;
+}
+.question{
+    font-size: 2rem;
+    font-family: 'DM Sans', sans-serif;
+    color: #8033ef;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.answers{
+    font-size: 1.2rem;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f1ecf9;
+    border: 3px solid hsl(264, 67%, 86%);
+    padding: 0.4rem;
+    padding-left: 1rem;
+    color: rgb(35, 34, 34);
+}
+.answers:hover{
+    background-color: #8033ef;
+    color: white;
+    border: 3px solid #8033ef;
+    cursor: pointer;
+}
+.score p{
+    text-align: center;
+    font-size: 1.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+

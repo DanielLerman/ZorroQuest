@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import WelcomePage from './components/WelcomePage'
+import QuestionPage from './components/QuestionPage'
+import { AppContext } from './context/AppContext'
+const App = () => {
+    const { componentsToggele } = React.useContext(AppContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    {!componentsToggele? <WelcomePage />: <QuestionPage />}
+    </>
+
+  )
 }
 
-export default App;
+export default App
