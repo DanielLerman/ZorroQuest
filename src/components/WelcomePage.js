@@ -1,6 +1,5 @@
 import React from 'react'
 import { AppContext } from '../context/AppContext'
-import handleComponentsToggele from '../context/AppContext'
 
 
 const WelcomePage = () => {
