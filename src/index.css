@@ -77,7 +77,14 @@ body {
  font-size: 1.5rem;
 background-color: #8033ef;
 color: white;
-border: none;
+border: 1px solid #8033ef;;
+}
+.startBtn:hover{
+    background-color: #f2eafe;
+    color: #8033ef;
+    border: 1px solid #8033ef;
+    cursor: pointer;
+    
 }
 .question{
     font-size: 2rem;
@@ -106,5 +113,11 @@ border: none;
     text-align: center;
     font-size: 1.5rem;
 }
-
+@keyframes fillAnimation {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  .animated {
+    animation: fillAnimation 3s forwards;
+  }
 

@@ -7,12 +7,9 @@ const handleComponentsToggele = () => {
     setComponentsToggele(!componentsToggele);
     console.log(componentsToggele)
 }
-
-
     const valueToShare={
         handleComponentsToggele,
         componentsToggele,
-
     }
     return (
         <AppContext.Provider value={valueToShare}>
