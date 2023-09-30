@@ -1,6 +1,8 @@
 import React from 'react'
+import { AppContext } from '../context/AppContext'
 
 const ScoreTable = ({ userAnswers, questions }) => {
+    const { username } = React.useContext(AppContext)
   const calculateScore = () => {
     let correctAnswers = 0;
 
@@ -18,7 +20,8 @@ const shouldAnimate = scorePercentage > 0
 
 return (
     <div className='d-flex flex-column score' >
-        <div className="purple welcomeTitle welcomeTitle2">Score {scorePercentage}% </div>
+
+        <div className="purple welcomeTitle welcomeTitle2"> {username.charAt(0).toUpperCase() + username.slice(1).toLowerCase()} Your Score is {scorePercentage}% </div>
         <div className='welcomeTitle'></div> 
         <div className="progress">
         <div

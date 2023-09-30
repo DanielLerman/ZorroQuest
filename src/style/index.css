@@ -119,5 +119,21 @@ border: 1px solid #8033ef;;
   }
   .animated {
     animation: fillAnimation 3s forwards;
+  } 
+  .nameInput{
+    font-size: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f1ecf9;
+    border: 2px solid #8033ef;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    color: rgb(35, 34, 34);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 50%;
   }
-
+.nameInput:hover{
+    border: 2px solid #8033ef;
+   
+}
